@@ -1,6 +1,4 @@
 package com.lms.librarymanagment.domain;
-
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -10,9 +8,9 @@ import javax.persistence.*;
 @Getter
 @Setter
 @ToString
-@Entity(name = "student")
+@Entity(name = "faculty")
 @Table
-public class Student {
+public class Faculty {
 
     @Id
     @SequenceGenerator(name = "sequence", allocationSize = 1)
@@ -21,13 +19,11 @@ public class Student {
     @Column(name = "id", updatable = false)
     private Long id;
 
-    @Column(name="major")
-    private String major;
+    @Column(name="position")
+    private String position;
 
-    @Column(name="programme")
-    private String programme;
+    @Column(name="status")
+    private String status;
 
-    @Column(name="registrationStatus")
-    private String registrationStatus;
 
 }
