@@ -21,24 +21,24 @@ public class BookRepositoryTest {
 
     @Test
     public void saveBooksTest (){
-        Book book = Book.builder()
-            .author("unknow")
+        Book book1 = Book.builder()
+            .ISBn("12A")
+            .author("unknown")
             .callNo("A-1289")
             .copyNum(Long.valueOf(10))
             .edition("new")
-            .ISBn("12A")
             .publisher("jafar books")
-            .title("the unknow")
+            .title("the unknown")
             .build();
 
-        bookRepository.save(book);
+        bookRepository.save(book1);
 
-        Assertions.assertThat(book.getId()).isGreaterThan(0);
+        Assertions.assertThat(book1.getId()).isGreaterThan(1);
 
     }
     @Test
     public void getBookTest(){
-        Book book = bookRepository.findById(1L).get();
+        Book book = bookRepository.findById(Long.valueOf(1)).get();
         Assertions.assertThat(book.getId()).isEqualTo(1L);
     }
 

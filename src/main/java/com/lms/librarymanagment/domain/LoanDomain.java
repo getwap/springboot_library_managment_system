@@ -1,9 +1,7 @@
 package com.lms.librarymanagment.domain;
 
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -15,7 +13,11 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Getter
 @Setter
 @ToString
+@Data
+@Builder
 @Entity(name = "loan")
+@AllArgsConstructor
+@NoArgsConstructor
 public class LoanDomain {
 
     @Id
