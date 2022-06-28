@@ -29,7 +29,9 @@ public class LoanRepositoryTest {
             .overDue10Days(false)
             .overDue17Days(false)
             .overDueFee(Long.valueOf(0))
-            .renewedTimes(Long.valueOf(0))
+            .renewedTimes(Long.valueOf(0
+
+            ))
             .returnDate(LocalDate.ofEpochDay(2022-07-10))
             .renewDate(LocalDate.ofEpochDay(2022-07-05))
             .overDue31Days(false)
