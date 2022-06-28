@@ -32,6 +32,7 @@ public class UserController {
     }
     @PostMapping("/users")
     public UsersDomain saveUser(@RequestBody UsersDomain usersDomain){
+
         return userService.saveUsers(usersDomain);
     }
     @PutMapping("/users/{id}")

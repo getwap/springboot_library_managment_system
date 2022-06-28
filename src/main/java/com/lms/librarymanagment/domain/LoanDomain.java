@@ -7,6 +7,8 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 import static javax.persistence.GenerationType.SEQUENCE;
 
@@ -14,7 +16,7 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Setter
 @ToString
 @Entity(name = "loan")
-public class Loan {
+public class LoanDomain {
 
     @Id
     @SequenceGenerator(
@@ -23,6 +25,19 @@ public class Loan {
     @GeneratedValue(strategy = SEQUENCE,generator = "loan_sequence")
     @Column(name="id", updatable = false)
     private Long id;
+
+//    public Set<UsersDomain> getLoanedUsers() {
+//        return loanedUsers;
+//    }
+
+//    @ManyToMany
+//    @JoinTable(
+//        name = "user_loaned",
+//        joinColumns = @JoinColumn(name = "loan_id"),
+//        inverseJoinColumns = @JoinColumn(name = "user_id")
+//    )
+//
+//    private Set<UsersDomain> loanedUsers = new HashSet<>();
 
     @Column(name="loanDate")
     private LocalDate loanDate;
@@ -57,6 +72,9 @@ public class Loan {
     @Column(name="overDue31Days")
     private Boolean overDue31Days;
 
-
-
+//
+//    public void loanedUsers(UsersDomain usersDomain) {
+//        loanedUsers.add(usersDomain);
+//
+//    }
 }

@@ -1,9 +1,7 @@
 package com.lms.librarymanagment.domain;
 
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -14,6 +12,10 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @ToString
 @Entity(name = "book")
 @Table
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Data
 public class Book {
 
     @Id

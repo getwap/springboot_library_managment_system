@@ -10,20 +10,26 @@ import javax.persistence.*;
 @ToString
 @Entity(name = "faculty")
 @Table
-public class Faculty {
+public class Faculty extends UsersDomain {
 
-    @Id
-    @SequenceGenerator(name = "sequence", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-
-    @Column(name = "id", updatable = false)
-    private Long id;
-
-    @Column(name="position")
     private String position;
-
-    @Column(name="status")
     private String status;
 
-
 }
+
+
+
+//
+//    @Id
+//    @SequenceGenerator(name = "sequence", allocationSize = 1)
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+//
+//    @Column(name = "id", updatable = false)
+//    private Long id;
+//
+//    @Column(name="position")
+//    private String position;
+//
+//    @Column(name="status")
+//    private String status;
+//

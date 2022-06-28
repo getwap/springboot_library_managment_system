@@ -18,14 +18,14 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UsersRepository usersRepository;
 
-
-
     @Override
     public List<UsersDomain> getUsers() {
+
         return usersRepository.findAll();
         }
    @Override
    public UsersDomain saveUsers(UsersDomain usersDomain){
+
         return usersRepository.save(usersDomain);
    }
    @Override
@@ -35,6 +35,7 @@ public class UserServiceImpl implements UserService {
            return usersRepository.getReferenceById(id);
        }
        throw new RuntimeException("user not found");
+
 
    }
    @Override
@@ -50,6 +51,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UsersDomain updateUsers(UsersDomain usersDomain) {
+
         return usersRepository.save(usersDomain);
     }
 }
